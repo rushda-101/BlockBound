@@ -239,3 +239,42 @@ Mitigation strategies:
 * Use version control for rollback safety
 
 This proactive risk identification demonstrates structured development planning.
+
+## 5. Project Management
+
+### 5.1 Coding Development Timeline (3 Weeks)
+Week 1:
+* Learn Godot fundamentals
+* Implement player movement & gravity
+* Build Level 1 structure
+
+Week 2:
+* Implement coin & hazard systems
+* Implement lives system
+* Design Level 2 & Level 3
+
+Week 3:
+* Implement level transitions
+* Add UI
+* Full playtesting
+* Bug fixing
+* Final documentation
+
+### 5.2 Review Meetings
+Each week will document:
+* Completed tasks
+* Planned tasks
+* Issues encountered
+* Solutions implemented
+* Adjustments to backlog
+
+This ensures structured progression and evidence of agile management.
+
+## 6. Tools & Development Techniques
+- Engine: Godot
+- Language: GDScript
+- Version Control: Git
+- Development Method: Iterative Agile approach
+- Design Approach: Modular scene architecture
+- Programming Paradigm: Object-Oriented design
+Code will follow separation of concerns principles to improve maintainability.
