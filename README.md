@@ -277,4 +277,25 @@ This ensures structured progression and evidence of agile management.
 - Development Method: Iterative Agile approach
 - Design Approach: Modular scene architecture
 - Programming Paradigm: Object-Oriented design
+
 Code will follow separation of concerns principles to improve maintainability.
+
+## 7. Testing Plan
+
+### 7.1 Functional Testing
+| Test ID | Feature | Action | Expected Outcome | Type | Pass/Fail | Further Actions |
+|---------|---------|--------|------------------|------|-----------|-----------------|
+|T1|Move Left|Press A|Player moves left smoothly|Unit| | |
+|T2|Move Right|Press D|Player moves right smoothly|Unit| | |
+|T3|Jump|Press W|Player jumps and lands correctly|Unit| | |
+|T4|Gravity|Walk off platform|Player falls naturally|Unit| | |
+|T5|Platform|Collision|Land on platform|Player stands without clipping|Unit| | |
+|T6|Coin Collection|Touch coin|Coin disappears & score increases|Unit| | |
+|T7|Hazard Collision|Touch hazard|Player loses one life|Unit| | |
+|T8|Life Reduction|Trigger hazard 3 times|Game Over activates|Unit| | |
+|T9|Respawn	Lose one life|Player respawns at level start|Unit| | |
+|T10|Level Completion|Reach exit object|Next level loads|Integration| | |
+|T11|Final Level Complete|Complete Level 3|Game Complete screen appears|Integration| | |
+|T12|UI Update|Collect coin|Score updates instantly|Integration| | |
+|T13|Lives UI|Lose life|Lives counter decreases correctly|Integration| | |
+
