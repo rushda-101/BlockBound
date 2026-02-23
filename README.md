@@ -1,7 +1,6 @@
 # BlockBound - Game Design Document
 
 ## 1. Project Overview/Game Concept
-
 Title: BlockBound
 Genre: 2D Platformer
 Platform: PC
@@ -16,7 +15,6 @@ The design prioritises mechanical clarity, progressive challenge and reward-driv
 ## 2. User and System Requirements (Scrum Style)
 
 ### 2.1 User Requirements
-
 User requirements are defined using Scrum-style user stories to reflect player needs.
 
 Core Gameplay Requirements:
@@ -36,7 +34,6 @@ Core Gameplay Requirements:
   As a player, I want a clear goal point so that I understand how to complete each level.
 
 ### 2.2 System Requirements
-
 The system must:
 * Detect and process WASD input.
 * Apply gravity and physics using Godot’s built-in physics engine.
@@ -53,8 +50,7 @@ The system must:
   * Player and hazards
 
 ### 2.3 Prioritisation (MoSCoW Method)
-
-Must Have:
+Must have:
 * Player movement and jump
 * Collision detection
 * Gravity physics
@@ -64,12 +60,12 @@ Must Have:
 * Three complete levels
 * Level transition system
 
-Should Have:
+Should have:
 * Score UI
 * Level indicator
 * Game Over screen
 
-Could Have:
+Could have:
 * Sound effects
 * Animated coins
 * Background music
@@ -90,3 +86,134 @@ This prioritisation ensures the core gameplay loop is completed before polish fe
 |B9|Level 3|Advanced difficulty|Requires precise movement|Must|
 |B10|Level Transition|Scene change system|Completing level loads next scene|Must|
 |B11|UI Display|Score and lives|UI updates correctly during gameplay|Should|
+
+Each backlog item is considered complete only when it satisfies functional testing and playtesting evaluation.
+
+## 4. Research, Planning & Design
+
+### 4.1 Overall Design Strategy
+BlockBound adopts a progressive difficulty scaling model, a common structure within 2D platformers. Research into classic platform game design, particularly early side-scrolling platformers such as Super Mario Bros, demonstrates that difficulty is most effectively introduced gradually through spatial design rather than sudden mechanical complexity.
+Game design literature on player engagement suggests that maintaining player motivation requires balancing challenge and ability (often described in Flow Theory). Based on this principle, BlockBound maintains consistent core mechanics (movement and jump) while increasing environmental complexity across levels.
+
+Difficulty progression is therefore implemented through:
+* Reduced platform size
+* Increased hazard frequency
+* Risk-reward coin placement
+* Tighter jump timing
+
+This ensures mechanical consistency while increasing player mastery requirements.
+
+### 4.2 Game Story
+Research into modern indie platformers indicates that excessive narrative can distract from gameplay-focused experiences. Therefore, BlockBound adopts a minimalist environmental narrative approach, inspired by digital-themed indie titles and arcade-era platformers.
+
+The player is trapped within a fragmented digital simulation composed of block structures. Each level represents increasing difficulty and increased thought processing within the gameplay. By collecting coins and reaching the exit portal, the player stabilises each sector and progresses toward escape.
+
+The narrative is minimalistic to keep focus on gameplay mechanics.
+
+### 4.3 Level Design
+Level design in platform games traditionally follows a structured teaching model:
+1. Introduce mechanic safely
+2. Reinforce mechanic with variation
+3. Combine mechanics under pressure
+
+This structure is widely observed in early platformers and continues in modern design practice.
+
+##### Level 1 – Introduction
+* Wide platforms
+* Minimal hazards
+* Safe coin placement
+* Low punishment
+
+Purpose:
+* Teach core mechanics
+* Allow player experimentation
+* Establish control familiarity
+
+This aligns with research on onboarding design, where early success builds player confidence.
+
+##### Level 2 – Escalation
+* Reduced platform width
+* Increased verticality
+* Hazards positioned between jumps
+* Moderate risk coin placement
+
+Purpose:
+* Increase precision requirement
+* Encourage careful movement
+* Reinforce learned mechanics under pressure
+
+This stage reflects the “skill consolidation” phase in progressive level design.
+
+##### Level 3 – Mastery
+* Small landing zones
+* Clustered hazards
+* Limited safe recovery space
+* High-risk coin placement
+
+Purpose:
+* Demand mastery of timing and positioning
+* Increase cognitive load
+* Reward experienced players
+
+Research into difficulty curves suggests that final levels should test mechanical fluency rather than introduce new mechanics, ensuring fairness and avoiding frustration.
+
+### 4.4 Gameplay Loop
+The gameplay loop is structured around a classic reward-feedback cycle:
+Navigate → Avoid hazards → Collect coins → Reach exit → Progress
+
+Research into player motivation models highlights four key components:
+* Player State – Active exploration
+* Need – Survival & progression
+* Challenge – Platform precision & hazard avoidance
+* Reward – Score increase & level completion
+
+Coins function as extrinsic rewards, reinforcing exploration behaviour. The lives system introduces tension, increasing perceived stakes without overwhelming difficulty.
+
+This structure aligns with established reward-challenge loops used in arcade-style games.
+
+### 4.5 Game Rules
+Clear and consistent rules are fundamental to perceived fairness in games. Research into player retention indicates that predictable rule systems reduce frustration.
+
+BlockBound follows consistent rule logic:
+* Player begins with 3 lives.
+* Hazard contact reduces 1 life.
+* Player respawns at level start.
+* Falling below map boundary results in life loss.
+* Game ends at 0 lives.
+* Level completion triggered by reaching exit object.
+
+No hidden mechanics are introduced across levels. All hazards behave consistently to preserve fairness.
+
+### 4.6 System Architecture
+BlockBound is developed using Godot due to research into engine suitability for 2D platform development.
+
+Godot provides:
+* Built-in physics engine
+* Native collision detection
+* Scene-based architecture
+* TileMap support for efficient level design
+* Lightweight project structure
+
+Research comparing custom-coded physics engines versus built-in physics systems suggests that using established engines reduces implementation risk and increases stability, particularly within limited development timeframes.
+
+##### Architectural Design
+Scenes:
+* Main Menu
+* Level 1
+* Level 2
+* Level 3
+* Game Over
+
+Scripts:
+* Player.gd
+* Coin.gd
+* Hazard.gd
+* GameManager.gd
+
+Node Types:
+* CharacterBody2D (Player)
+* Area2D (Coins & Hazards)
+* TileMap (Level Layout)
+* CanvasLayer (UI)
+
+This modular architecture follows separation-of-concerns principles, improving maintainability and scalability.
