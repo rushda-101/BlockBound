@@ -318,3 +318,12 @@ Code will follow separation of concerns principles to improve maintainability.
 |T3|Hold Jump Continuously|Hold W|Only single jump allowed| | |
 |T4|Leave Game Idle|No interaction|No physics instability| | |
 |T5|Restart After Game Over|Press restart|Game resets correctly| | |
+
+### 7.4 Performance Testing
+| Test ID | Scenario | Expected Outcome | Pass/Fail | Further Actions |
+|---------|----------|------------------|-----------|-----------------|
+|T1|Multiple Coins on Screen|No frame drop| | |
+|T2|Rapid Input Changes|No stuttering| | |
+|T3|Level Transition|Scene loads smoothly| | |
+|T4|Long Play Session|No memory issues| | |
+|T5|Full Game Completion|No crashes| | |
