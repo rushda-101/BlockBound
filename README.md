@@ -77,7 +77,8 @@ Could Have:
 This prioritisation ensures the core gameplay loop is completed before polish features.
 
 ## 3. Scrum Backlog
-|ID|Feature|Description|Acceptance Criteria|Priority|
+| ID | Feature | Description | Acceptance Criteria | Priority |
+|----|---------|-------------|---------------------|----------|
 |B1|Player Controller|Implement movement & jumping|Player moves smoothly and responds instantly to input|Must|
 |B2|Gravity System|Apply gravity physics|Player falls naturally and lands correctly|Must|
 |B3|Platform Collision|Solid ground detection|Player cannot pass through platforms|Must|
