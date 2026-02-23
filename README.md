@@ -289,13 +289,32 @@ Code will follow separation of concerns principles to improve maintainability.
 |T2|Move Right|Press D|Player moves right smoothly|Unit| | |
 |T3|Jump|Press W|Player jumps and lands correctly|Unit| | |
 |T4|Gravity|Walk off platform|Player falls naturally|Unit| | |
-|T5|Platform|Collision|Land on platform|Player stands without clipping|Unit| | |
+|T5|Platform Collision|Land on platform|Player stands without clipping|Unit| | |
 |T6|Coin Collection|Touch coin|Coin disappears & score increases|Unit| | |
 |T7|Hazard Collision|Touch hazard|Player loses one life|Unit| | |
 |T8|Life Reduction|Trigger hazard 3 times|Game Over activates|Unit| | |
-|T9|Respawn	Lose one life|Player respawns at level start|Unit| | |
+|T9|Respawn|Lose one life|Player respawns at level start|Unit| | |
 |T10|Level Completion|Reach exit object|Next level loads|Integration| | |
 |T11|Final Level Complete|Complete Level 3|Game Complete screen appears|Integration| | |
 |T12|UI Update|Collect coin|Score updates instantly|Integration| | |
 |T13|Lives UI|Lose life|Lives counter decreases correctly|Integration| | |
 
+### 7.2 Boundary and Edge Case Testing
+| Test ID | Scenario | Action | Expected Outcome | Pass/Fail | Further Actions |
+|---------|----------|--------|------------------|-----------|-----------------|
+|T1|Edge of Platform|Stand on platform edge|Player does not slide off unexpectedly| | |
+|T2|Rapid JumpPress|Spam jump key|No unintended double jump| | |
+|T3|Jump at Platform Edge|Jump partially off edge|Player behaves consistently| | |
+|T4|Map Boundary Bottom|Fall below map|Life deducted & respawn| | |
+|T5|Coin at Platform Edge|Collect near edge|Coin registers correctly| | |
+|T6|Hazard Edge Contact|Slight contact with spike|Collision still triggers| | |
+|T7|Simultaneous Coin + Hazard|Touch both at same time|Hazard takes priority| | |
+
+### 7.3 Negative Testing (Unexpected Input)
+| Test ID | Scenario | Action | Expected Outcome | Pass/Fail | Further Actions |
+|---------|----------|--------|------------------|-----------|-----------------|
+|T1|No Input|Player idle|Character remains stationary| | |
+|T2|Press All Movement Keys|A + D simultaneously|No erratic movement| | |
+|T3|Hold Jump Continuously|Hold W|Only single jump allowed| | |
+|T4|Leave Game Idle|No interaction|No physics instability| | |
+|T5|Restart After Game Over|Press restart|Game resets correctly| | |
