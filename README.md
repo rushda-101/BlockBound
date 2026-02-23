@@ -1,12 +1,12 @@
 # BlockBound - Game Design Document
 
 ## 1. Project Overview/Game Concept
-Title: BlockBound
-Genre: 2D Platformer
-Platform: PC
-Engine: Godot
-Programming Language: GDScript
-Target Audience: Casual and intermediate players who enjoy skill-based progression games.
+- Title: BlockBound
+- Genre: 2D Platformer
+- Platform: PC
+- Engine: Godot
+- Programming Language: GDScript
+- Target Audience: Casual and intermediate players who enjoy skill-based progression games.
 
 BlockBound is a three-level 2D platformer inspired by classic games such as Super Mario Bros. The player navigates through a digital world, collecting coins while avoiding hazards in order to reach the level exit. Each level increases in difficulty through tighter platform spacing, greater hazards and more complex traversal challenges.
 
@@ -118,7 +118,7 @@ Level design in platform games traditionally follows a structured teaching model
 
 This structure is widely observed in early platformers and continues in modern design practice.
 
-##### Level 1 – Introduction
+#### Level 1 – Introduction
 * Wide platforms
 * Minimal hazards
 * Safe coin placement
@@ -131,7 +131,7 @@ Purpose:
 
 This aligns with research on onboarding design, where early success builds player confidence.
 
-##### Level 2 – Escalation
+#### Level 2 – Escalation
 * Reduced platform width
 * Increased verticality
 * Hazards positioned between jumps
@@ -144,7 +144,7 @@ Purpose:
 
 This stage reflects the “skill consolidation” phase in progressive level design.
 
-##### Level 3 – Mastery
+#### Level 3 – Mastery
 * Small landing zones
 * Clustered hazards
 * Limited safe recovery space
@@ -196,7 +196,7 @@ Godot provides:
 
 Research comparing custom-coded physics engines versus built-in physics systems suggests that using established engines reduces implementation risk and increases stability, particularly within limited development timeframes.
 
-##### Architectural Design
+#### Architectural Design
 Scenes:
 * Main Menu
 * Level 1
@@ -217,3 +217,25 @@ Node Types:
 * CanvasLayer (UI)
 
 This modular architecture follows separation-of-concerns principles, improving maintainability and scalability.
+
+### 4.7 State Diagram
+The game follows a finite state model:
+<img width="361" height="551" alt="BlockBound State Diagram drawio" src="https://github.com/user-attachments/assets/45a103eb-e46c-4efd-8b83-909786528a2b" />
+
+Finite State Machines (FSMs) are widely used in game architecture research due to their clarity and predictability. Implementing structured state transitions reduces logic errors and improves debugging efficiency.
+
+### 4.8 Technical Challenges
+Based on research into common 2D platform development issues, anticipated challenges include:
+* Preventing unintended double-jumping
+* Fine-tuning gravity for natural movement feel
+* Ensuring collision boundaries are accurate
+* Managing scene transitions without variable loss
+* Balancing difficulty progression
+
+Mitigation strategies:
+* Use Godot’s built-in physics methods (move_and_slide)
+* Implement grounded checks for jump control
+* Conduct iterative playtesting
+* Use version control for rollback safety
+
+This proactive risk identification demonstrates structured development planning.
