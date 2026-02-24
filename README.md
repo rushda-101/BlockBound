@@ -242,33 +242,131 @@ This proactive risk identification demonstrates structured development planning.
 
 ## 5. Project Management
 
-### 5.1 Coding Development Timeline (3 Weeks)
-Week 1:
-* Learn Godot fundamentals
-* Implement player movement & gravity
-* Build Level 1 structure
+### 5.1 Development Methodology
+BlockBound will be developed using an adapted Agile methodology inspired by Scrum principles. Coding development was structured into three weekly sprints, each with clearly defined objectives aligned to backlog priorities.
 
-Week 2:
-* Implement coin & hazard systems
+Core backlog items were identified at project initiation and categorised using the MoSCoW prioritisation model (Must, Should, Could). These items formed the basis of sprint planning and progress tracking.
+
+Each week included:
+* Sprint goal definition
+* Task allocation from backlog
+* Implementation phase
+* Testing phase
+* Backlog review
+* Reflection and adjustment
+
+This structured approach ensured steady progress while allowing flexibility for technical challenges.
+
+### 5.2 Coding Development Timeline (3-Week Sprint Plan)
+#### Week 1 – Core Mechanics & Foundation
+Sprint Goal: Establish functional player movement and playable Level 1 prototype.
+
+Planned Tasks:
+* Learn core Godot systems and scene structure
+* Implement player movement (WASD)
+* Implement jump and gravity system
+* Implement collision with platforms
+* Build basic Level 1 TileMap layout
+
+Focus Areas:
+* Analysis: Understanding Godot physics system
+* Design: Player controller architecture
+* Coding: Movement and collision scripts
+* Testing: Unit testing movement stability
+
+#### Week 2 – Core Gameplay Systems
+Sprint Goal: Implement interactive gameplay systems and expand level design.
+
+Planned Tasks:
+* Implement coin collection system
+* Implement score tracking
+* Implement hazard collision detection
 * Implement lives system
-* Design Level 2 & Level 3
+* Implement respawn system
+* Design and construct Level 2 and Level 3
 
-Week 3:
-* Implement level transitions
-* Add UI
-* Full playtesting
-* Bug fixing
-* Final documentation
+Focus Areas:
+* Design: Risk-reward coin placement
+* Coding: Area2D detection & signal system
+* Testing: Hazard and respawn reliability
+* Difficulty balancing
 
-### 5.2 Review Meetings
-Each week will document:
-* Completed tasks
-* Planned tasks
-* Issues encountered
-* Solutions implemented
-* Adjustments to backlog
+#### Week 3 – Integration, Polish & Delivery
+Sprint Goal: Complete full gameplay loop and finalise project.
 
-This ensures structured progression and evidence of agile management.
+Planned Tasks:
+* Implement level transition system
+* Implement Game Over state
+* Add UI elements (score, lives display)
+* Conduct full system testing
+* Fix identified bugs
+* Finalise documentation
+
+Focus Areas:
+* Integration testing
+* Performance validation
+* Difficulty tuning
+* Final delivery preparation
+
+### 5.3 Burndown Chart
+A burndown chart was maintained throughout development to track remaining backlog items against time.
+
+### 5.4 Backlog Reviews
+At the end of each sprint, a backlog review session was conducted. This involved:
+* Marking completed items as done
+* Re-prioritising incomplete tasks
+* Identifying new required tasks
+* Assessing scope feasibility
+
+Backlog reviews ensured that:
+* Core gameplay features remained prioritised
+* Scope creep was avoided
+* Technical barriers were addressed early
+
+This iterative evaluation supported controlled project progression and reduced implementation risk.
+
+### 5.5 Development Review Meetings
+Development review meetings were conducted weekly and documented to provide reflective evidence of progress. Each meeting addressed:
+1. What was completed since the last review?
+2. What will be completed in the next sprint?
+3. What problems or barriers were encountered?
+4. How were these resolved?
+5. Were any backlog adjustments required?
+
+#### Week 1 Review
+Completed:
+* Player movement and jump system
+* Gravity and collision detection
+* Basic Level 1 layout
+
+Planned Next:
+* Coin and hazard systems
+* Lives implementation
+
+Problems Encountered:
+
+(Unintended double jumping
+Jump arc felt unnatural)
+
+Resolutions:
+
+(Implemented grounded check using is_on_floor()
+Adjusted gravity and jump velocity constants)
+
+Backlog Impact:
+* No scope changes
+
+### 5.6 Risk Management
+Potential risks identified at project initiation:
+* Learning curve associated with Godot
+* Physics tuning complexity
+* Time constraints
+
+Mitigation strategies included:
+* Prioritising core mechanics early
+* Avoiding advanced AI implementation
+* Regular backlog review to prevent scope expansion
+* Iterative testing after each feature implementation
 
 ## 6. Tools & Development Techniques
 - Engine: Godot
