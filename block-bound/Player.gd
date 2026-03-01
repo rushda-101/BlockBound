@@ -3,6 +3,14 @@ extends CharacterBody2D
 # Movement speed
 var speed = 200
 var jump_velocity = -400
+var gravity = 900
+
+# Store start position for respawn
+var start_position
+
+func _ready():
+	# Save the starting position of the player
+	start_position = global_position
 
 func _physics_process(delta):
 	# Horizontal movement
@@ -12,9 +20,22 @@ func _physics_process(delta):
 	if Input.is_action_pressed("ui_left"):
 		velocity.x -= speed
 
+	# Apply gravity
+	if not is_on_floor():
+		velocity.y += gravity * delta
+
 	# Jump
 	if Input.is_action_just_pressed("ui_up") and is_on_floor():
 		velocity.y = jump_velocity
 
-	# Gravity is applied automatically
+	# Check if player fell below the level
+	if global_position.y > 1200:
+		respawn()
+
+	# Move the player
 	move_and_slide()
+
+# Respawn function
+func respawn():
+	global_position = start_position
+	velocity = Vector2.ZERO
