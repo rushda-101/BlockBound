@@ -398,7 +398,7 @@ Code will follow separation of concerns principles to improve maintainability.
 |T9|Respawn|Lose one life|Player respawns at level start|Unit| | |
 |T10|Level Completion|Reach exit object|Next level loads|Integration| | |
 |T11|Final Level Complete|Complete Level 3|Game Complete screen appears|Integration| | |
-|T12|UI Update|Collect coin|Score updates instantly|Integration| | |
+|T12|UI Update|Collect coin|Score updates instantly|Integration|Pass <img width="878" height="497" alt="image" src="https://github.com/user-attachments/assets/4d9ee020-a7a2-42f4-bc5e-154e787913b9" />|n/a|
 |T13|Lives UI|Lose life|Lives counter decreases correctly|Integration| | |
 
 ### 7.2 Boundary and Edge Case Testing
