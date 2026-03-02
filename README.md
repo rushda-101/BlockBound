@@ -395,11 +395,11 @@ Code will follow separation of concerns principles to improve maintainability.
 |**T6.1 (T6 Retest)**|Coin Collection|Touch coin|Coin disappears & score increases|Unit|Pass <img width="485" height="500" alt="image" src="https://github.com/user-attachments/assets/8446aa8a-0c75-4088-8a88-170b773b3b90" />|n/a|
 |T7|Hazard Collision|Touch hazard|Player loses one life|Unit| | |
 |T8|Life Reduction|Trigger hazard 3 times|Game Over activates|Unit| | |
-|T9|Respawn|Lose one life|Player respawns at level start|Unit| | |
+|T9|Respawn|Lose one life|Player respawns at level start|Unit|Pass <img width="500" height="448" alt="image" src="https://github.com/user-attachments/assets/28927ff1-c9c6-450c-bed2-4375f09c4222" />|n/a|
 |T10|Level Completion|Reach exit object|Next level loads|Integration| | |
 |T11|Final Level Complete|Complete Level 3|Game Complete screen appears|Integration| | |
 |T12|UI Update|Collect coin|Score updates instantly|Integration|Pass <img width="878" height="497" alt="image" src="https://github.com/user-attachments/assets/4d9ee020-a7a2-42f4-bc5e-154e787913b9" />|n/a|
-|T13|Lives UI|Lose life|Lives counter decreases correctly|Integration| | |
+|T13|Lives UI|Lose life|Lives counter decreases correctly|Integration|Pass <img width="500" height="448" alt="image" src="https://github.com/user-attachments/assets/3c3e6e1a-ad00-41a2-a2e2-e424b074e1dd" />|n/a|
 
 ### 7.2 Boundary and Edge Case Testing
 | Test ID | Scenario | Action | Expected Outcome | Pass/Fail | Further Actions |
