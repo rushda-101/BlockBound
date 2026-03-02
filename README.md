@@ -391,7 +391,8 @@ Code will follow separation of concerns principles to improve maintainability.
 |T4|Gravity|Walk off platform|Player falls naturally|Unit|Pass <img width="1916" height="1005" alt="Screenshot 2026-03-01 203507" src="https://github.com/user-attachments/assets/b924ddec-a68b-4f58-a3f6-8715b3c4dd67" />|n/a|
 |T5|Platform Collision|Land on platform|Player stands without clipping|Unit|Fail Player was falling straight to the ground|Make each individual platform it's own property so it possesses it's own attributes <img width="209" height="217" alt="image" src="https://github.com/user-attachments/assets/91074243-7bad-44bc-ac62-b18ec9b05491" />|
 |**T5.1 (T5 Retest)**|Platform Collision|Land on platform|Player stands without clipping|Unit|Pass <img width="1915" height="1002" alt="Screenshot 2026-03-01 204657" src="https://github.com/user-attachments/assets/4d2a5bde-712d-4160-9c7d-3806643607c7" />|n/a|
-|T6|Coin Collection|Touch coin|Coin disappears & score increases|Unit| | |
+|T6|Coin Collection|Touch coin|Coin disappears & score increases|Unit|Fail Player was touching coin but the coin was not dissapearing|Add seperate script to the game manager node <img width="212" height="221" alt="image" src="https://github.com/user-attachments/assets/2b87f779-81f9-4214-9d9b-af4f34ed9b98" />|
+|**T6.1 (T6 Retest)**|Coin Collection|Touch coin|Coin disappears & score increases|Unit|Pass <img width="485" height="500" alt="image" src="https://github.com/user-attachments/assets/8446aa8a-0c75-4088-8a88-170b773b3b90" />|n/a|
 |T7|Hazard Collision|Touch hazard|Player loses one life|Unit| | |
 |T8|Life Reduction|Trigger hazard 3 times|Game Over activates|Unit| | |
 |T9|Respawn|Lose one life|Player respawns at level start|Unit| | |
