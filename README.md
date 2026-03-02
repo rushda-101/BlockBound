@@ -394,7 +394,7 @@ Code will follow separation of concerns principles to improve maintainability.
 |T6|Coin Collection|Touch coin|Coin disappears & score increases|Unit|Fail Player was touching coin but the coin was not dissapearing|Add seperate script to the game manager node <img width="212" height="221" alt="image" src="https://github.com/user-attachments/assets/2b87f779-81f9-4214-9d9b-af4f34ed9b98" />|
 |**T6.1 (T6 Retest)**|Coin Collection|Touch coin|Coin disappears & score increases|Unit|Pass <img width="485" height="500" alt="image" src="https://github.com/user-attachments/assets/8446aa8a-0c75-4088-8a88-170b773b3b90" />|n/a|
 |T7|Hazard Collision|Touch hazard|Player loses one life|Unit| | |
-|T8|Life Reduction|Trigger hazard 3 times|Game Over activates|Unit| | |
+|T8|Life Reduction|Trigger hazard 3 times|Game Over activates|Unit|Pass <img width="957" height="497" alt="image" src="https://github.com/user-attachments/assets/10f95f54-770b-4c25-81d5-9cf82747bedf" />|n/a|
 |T9|Respawn|Lose one life|Player respawns at level start|Unit|Pass <img width="500" height="448" alt="image" src="https://github.com/user-attachments/assets/28927ff1-c9c6-450c-bed2-4375f09c4222" />|n/a|
 |T10|Level Completion|Reach exit object|Next level loads|Integration| | |
 |T11|Final Level Complete|Complete Level 3|Game Complete screen appears|Integration| | |
