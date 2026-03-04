@@ -41,7 +41,7 @@ func _physics_process(delta):
 	if is_flashing:
 		flash_timer -= delta
 		if flash_timer <= 0:
-			$PlayerSprite.modulate = Color(1,1,1)  # back to normal
+			$Sprite2D.modulate = Color(1,1,1)  # back to normal
 			is_flashing = false
 
 # Respawn function
@@ -50,6 +50,6 @@ func respawn():
 	velocity = Vector2.ZERO
 
 func start_flash():
-	$PlayerSprite.modulate = Color(1,0,0)  # red
+	$Sprite2D.modulate = Color(1,0,0)  # red
 	flash_timer = flash_duration
 	is_flashing = true

@@ -34,6 +34,11 @@ func lose_life():
 	lives -= 1
 	lives_label.text = "Lives: " + str(lives)
 
+	# RED FLASH: call start_flash() on player if it exists
+	var player = get_node_or_null("../Player")  # Adjust path if Player is elsewhere
+	if player:
+		player.start_flash()
+
 	if lives <= 0:
 		trigger_game_over()
 
