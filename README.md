@@ -393,13 +393,15 @@ Code will follow separation of concerns principles to improve maintainability.
 |**T5.1 (T5 Retest)**|Platform Collision|Land on platform|Player stands without clipping|Unit|Pass <img width="1915" height="1002" alt="Screenshot 2026-03-01 204657" src="https://github.com/user-attachments/assets/4d2a5bde-712d-4160-9c7d-3806643607c7" />|n/a|
 |T6|Coin Collection|Touch coin|Coin disappears & score increases|Unit|Fail Player was touching coin but the coin was not dissapearing|Add seperate script to the game manager node <img width="212" height="221" alt="image" src="https://github.com/user-attachments/assets/2b87f779-81f9-4214-9d9b-af4f34ed9b98" />|
 |**T6.1 (T6 Retest)**|Coin Collection|Touch coin|Coin disappears & score increases|Unit|Pass <img width="485" height="500" alt="image" src="https://github.com/user-attachments/assets/8446aa8a-0c75-4088-8a88-170b773b3b90" />|n/a|
-|T7|Hazard Collision|Touch hazard|Player loses one life|Unit| | |
+|T7|Hazard Collision|Touch hazard|Player loses one life|Unit|Pass, However player was losing life even at a large distance from the spike|Change the player collision shape so it is not too big <img width="254" height="278" alt="Screenshot 2026-03-04 211134" src="https://github.com/user-attachments/assets/1abfe9bb-97a4-4af3-8553-34b900eac957" />|
+|**T7.1 (T7 Retest)**|Hazard Collision|Touch hazard|Player loses one life|Unit|Pass <img width="1304" height="896" alt="Screenshot 2026-03-04 220532" src="https://github.com/user-attachments/assets/51041f1a-754a-4a18-a38e-8cfaab48da27" />|n/a|
 |T8|Life Reduction|Trigger hazard 3 times|Game Over activates|Unit|Pass <img width="957" height="497" alt="image" src="https://github.com/user-attachments/assets/10f95f54-770b-4c25-81d5-9cf82747bedf" />|n/a|
 |T9|Respawn|Lose one life|Player respawns at level start|Unit|Pass <img width="500" height="448" alt="image" src="https://github.com/user-attachments/assets/28927ff1-c9c6-450c-bed2-4375f09c4222" />|n/a|
-|T10|Level Completion|Reach exit object|Next level loads|Integration| | |
+|T10|Level Completion|Reach exit object|Next level loads|Integration|Pass <img width="1643" height="895" alt="Screenshot 2026-03-04 220609" src="https://github.com/user-attachments/assets/6f91ce04-6662-42c4-8270-e18ac0e02238" />|n/a|
 |T11|Final Level Complete|Complete Level 3|Game Complete screen appears|Integration| | |
 |T12|UI Update|Collect coin|Score updates instantly|Integration|Pass <img width="878" height="497" alt="image" src="https://github.com/user-attachments/assets/4d9ee020-a7a2-42f4-bc5e-154e787913b9" />|n/a|
 |T13|Lives UI|Lose life|Lives counter decreases correctly|Integration|Pass <img width="500" height="448" alt="image" src="https://github.com/user-attachments/assets/3c3e6e1a-ad00-41a2-a2e2-e424b074e1dd" />|n/a|
+|T14|Red Flash|Lose life|Player sprite flashed red when life is lost|Integration|Pass|n/a|
 
 ### 7.2 Boundary and Edge Case Testing
 | Test ID | Scenario | Action | Expected Outcome | Pass/Fail | Further Actions |
@@ -409,8 +411,7 @@ Code will follow separation of concerns principles to improve maintainability.
 |T3|Jump at Platform Edge|Jump partially off edge|Player behaves consistently|Pass <img width="580" height="648" alt="Screenshot 2026-03-01 235349" src="https://github.com/user-attachments/assets/bd7906c2-e3df-4cd9-8d42-c45742cb6495" />|n/a|
 |T4|Map Boundary Bottom|Fall below map|Life deducted & respawn|Pass <img width="949" height="846" alt="Screenshot 2026-03-02 183622" src="https://github.com/user-attachments/assets/cc1505d7-7c9b-4743-8596-d65797781035" />|n/a|
 |T5|Coin at Platform Edge|Collect near edge|Coin registers correctly|Pass <img width="1607" height="844" alt="Screenshot 2026-03-02 165815" src="https://github.com/user-attachments/assets/b0850218-9299-471e-aad0-cfac0d240d81" />|n/a|
-|T6|Hazard Edge Contact|Slight contact with spike|Collision still triggers| | |
-|T7|Simultaneous Coin + Hazard|Touch both at same time|Hazard takes priority| | |
+|T6|Hazard Edge Contact|Slight contact with spike|Collision still triggers|Pass <img width="1304" height="896" alt="Screenshot 2026-03-04 220532" src="https://github.com/user-attachments/assets/76e00ec6-da42-4df3-93e5-907a84173717" />|n/a|
 
 ### 7.3 Negative Testing (Unexpected Input)
 | Test ID | Scenario | Action | Expected Outcome | Pass/Fail | Further Actions |
