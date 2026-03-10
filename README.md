@@ -344,17 +344,71 @@ Planned Next:
 * Lives implementation
 
 Problems Encountered:
-
-(Unintended double jumping
-Jump arc felt unnatural)
+* Jump (W) was not working
 
 Resolutions:
-
-(Implemented grounded check using is_on_floor()
-Adjusted gravity and jump velocity constants)
+* Implemented grounded check using is_on_floor()
+* Adjusted gravity and jump velocity constants
+* Retest: Verified that jump now works consistently with W key (T3.1)
 
 Backlog Impact:
 * No scope changes
+
+#### Week 2 Review
+Completed:
+* Coin collection system
+* Score tracking
+* Hazard detection
+* Lives system and respawn
+* Level 2 and Level 3 layout
+
+Planned Next:
+* Scene transitions
+* UI system
+* Full testing pass
+* Problems Encountered:
+* Respawn occasionally triggered incorrect position
+* UI label not updating consistently
+* Player losing life even at a distance from spikes
+* Coins not disappearing when collected
+
+Resolutions:
+* Centralised respawn logic in GameManager
+* Used Godot signal system for UI updates
+* Adjusted collision shapes for hazards (T7.1)
+* Added proper coin script and connection to GameManager (T6.1)
+
+Backlog Impact:
+* UI refinement task formally added
+
+#### Week 3 Review
+Completed:
+* Level transitions
+* Game Over state
+* UI finalisation (Score, Lives, Game Over panel)
+* Flashing player effect on life loss
+* Full testing plan execution, including retests for movement, jump, hazards, coins, respawn, and UI updates (T1.1, T3.1, T5.1, T6.1, T7.1)
+
+Planned Next:
+* Minor difficulty balancing
+* Documentation refinement
+
+Problems Encountered:
+* Level 3 difficulty too high
+* Minor collision inconsistencies
+* Player could move during Game Over / Level Complete initially
+* “You Won!!” and restart message not centered or missing restart instructions
+
+Resolutions:
+* Adjusted platform spacing and collision shapes
+* Added can_move flag to Player script to disable movement during Game Over / Level Complete (T15)
+* Centered “You Won!!” panel and added “Press R to restart” text
+* Verified player cannot move during Game Over / Level Complete and restart works correctly
+
+Backlog Status:
+* All Must Have items complete
+* Should Have items complete
+* Optional features deferred
 
 ### 5.6 Risk Management
 Potential risks identified at project initiation:
@@ -402,6 +456,7 @@ Code will follow separation of concerns principles to improve maintainability.
 |T12|UI Update|Collect coin|Score updates instantly|Integration|Pass <img width="878" height="497" alt="image" src="https://github.com/user-attachments/assets/4d9ee020-a7a2-42f4-bc5e-154e787913b9" />|n/a|
 |T13|Lives UI|Lose life|Lives counter decreases correctly|Integration|Pass <img width="500" height="448" alt="image" src="https://github.com/user-attachments/assets/3c3e6e1a-ad00-41a2-a2e2-e424b074e1dd" />|n/a|
 |T14|Red Flash|Lose life|Player sprite flashed red when life is lost|Integration|Pass|n/a|
+|T15|Player Movement Disabled on Game Over / Level Complete|Try moving with A/D or jumping with W when player has 0 lives or reaches Level 3 end flag|Player cannot move, jump, or interact; only R key works to restart|Unit|Pass <img width="1906" height="907" alt="Screenshot 2026-03-10 014616" src="https://github.com/user-attachments/assets/f98a76d3-452a-4df7-bec9-677d76a6bbc6" />|n/a|
 
 ### 7.2 Boundary and Edge Case Testing
 | Test ID | Scenario | Action | Expected Outcome | Pass/Fail | Further Actions |
