@@ -318,10 +318,10 @@ At project start, 11 core backlog items were identified, including all Must Have
 #### Burndown Progression
 |Week|Remaining Tasks|Notes|
 |----|---------------|-----|
-|Week 0(Project Start)|11|Initial identification of Must and Should backlog items|
-|End of Week 1|8|Completed player movement, jump system, gravity, and Level 1 layout; retest adjustments for jump (T3.1)|
-|End of Week 2|3|Completed coin collection, hazards, lives, respawn, and Level 2/3 layout; retests applied for hazards, coins, respawn, and UI updates (T5.1, T6.1, T7.1)|
-|End of Week 3|0|Completed level transitions, Game Over state, UI finalisation, flashing player effect, and retests for movement-disabled on Game Over/Level Complete (T15)|
+|Week 0 (Project Start)|11|Initial identification of Must and Should backlog items|
+|End of Week 1|8|Completed player movement, jump system, gravity and Level 1 layout; retest adjustments for jump (T3.1)|
+|End of Week 2|3|Completed coin collection, hazards, lives, respawn and Level 2/3 layout; retests applied for hazards, coins, respawn and UI updates (T5.1, T6.1, T7.1)|
+|End of Week 3|0|Completed level transitions, Game Over state, UI finalisation, flashing player effect and retests for movement-disabled on Game Over/Level Complete (T15)|
 
 #### Analysis
 * The chart demonstrates a consistent reduction in backlog workload, reflecting effective sprint management.
@@ -329,7 +329,7 @@ At project start, 11 core backlog items were identified, including all Must Have
 * Minor backlog adjustments occurred in Week 2 when UI refinement and Game Over implementation were formally added as structured tasks; these were incorporated without affecting overall sprint completion.
 * Retests conducted throughout development ensured all previously failed features were corrected and verified.
 
-The burndown chart provides visual evidence of structured project management, adherence to timeline objectives, and careful integration of retests and refinements.
+The burndown chart provides visual evidence of structured project management, adherence to timeline objectives and careful integration of retests and refinements.
 
 ### 5.4 Backlog Reviews
 At the end of each sprint, a backlog review session was conducted. This involved:
@@ -407,7 +407,7 @@ Completed:
 * Game Over state
 * UI finalisation (Score, Lives, Game Over panel)
 * Flashing player effect on life loss
-* Full testing plan execution, including retests for movement, jump, hazards, coins, respawn, and UI updates (T1.1, T3.1, T5.1, T6.1, T7.1)
+* Full testing plan execution, including retests for movement, jump, hazards, coins, respawn and UI updates (T1.1, T3.1, T5.1, T6.1, T7.1)
 
 Planned Next:
 * Minor difficulty balancing
