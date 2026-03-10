@@ -398,7 +398,7 @@ Code will follow separation of concerns principles to improve maintainability.
 |T8|Life Reduction|Trigger hazard 3 times|Game Over activates|Unit|Pass <img width="957" height="497" alt="image" src="https://github.com/user-attachments/assets/10f95f54-770b-4c25-81d5-9cf82747bedf" />|n/a|
 |T9|Respawn|Lose one life|Player respawns at level start|Unit|Pass <img width="500" height="448" alt="image" src="https://github.com/user-attachments/assets/28927ff1-c9c6-450c-bed2-4375f09c4222" />|n/a|
 |T10|Level Completion|Reach exit object|Next level loads|Integration|Pass <img width="1643" height="895" alt="Screenshot 2026-03-04 220609" src="https://github.com/user-attachments/assets/6f91ce04-6662-42c4-8270-e18ac0e02238" />|n/a|
-|T11|Final Level Complete|Complete Level 3|Game Complete screen appears|Integration| | |
+|T11|Final Level Complete|Complete Level 3|Game Complete screen appears|Integration|Pass <img width="953" height="449" alt="image" src="https://github.com/user-attachments/assets/a2840446-7e2f-4232-b50c-81cfed7b6506" />|n/a|
 |T12|UI Update|Collect coin|Score updates instantly|Integration|Pass <img width="878" height="497" alt="image" src="https://github.com/user-attachments/assets/4d9ee020-a7a2-42f4-bc5e-154e787913b9" />|n/a|
 |T13|Lives UI|Lose life|Lives counter decreases correctly|Integration|Pass <img width="500" height="448" alt="image" src="https://github.com/user-attachments/assets/3c3e6e1a-ad00-41a2-a2e2-e424b074e1dd" />|n/a|
 |T14|Red Flash|Lose life|Player sprite flashed red when life is lost|Integration|Pass|n/a|
